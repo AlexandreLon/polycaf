@@ -3,7 +3,7 @@
       <div>
       </div>
       <div id="nav-logo-container">
-        <img src="../assets/logo.png" alt="Logo" />
+        <img src="../assets/logopolycaf.png" alt="Logo" />
       </div>
       <div id="nav-connection">
         <button id="button-connection">{{connexion}}</button>
