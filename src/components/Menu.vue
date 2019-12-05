@@ -5,15 +5,15 @@
       <div id="nav-logo-container">
         <img src="../assets/logo.png" alt="Logo" />
       </div>
-      <div id="nav">
-        <button id="connexion">{{connexion}}</button>
+      <div id="nav-connection">
+        <button id="button-connection">{{connexion}}</button>
       </div>
     </nav>
 </template>
 
 <script>
     export default {
-        name: "Menu",
+      name: "Menu",
       data(){
           return {
             connexion: "Connexion"
@@ -38,7 +38,23 @@
     display: flex;
     justify-content: center;
   }
+  nav #nav-connection{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
   nav img{
     height: 100%;
+  }
+  #button-connection{
+    color: white;
+    height: 100%;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+    margin-right: 10%;
+    font-size: 16px;
+    padding: 0 20px;
   }
 </style>

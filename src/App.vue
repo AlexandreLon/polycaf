@@ -16,6 +16,7 @@ export default {
     --color-blue: #18A8F0;
   }
   body{
+    font-family: Montserrat, "sans-serif";
     padding: 0;
     margin: 0;
   }
