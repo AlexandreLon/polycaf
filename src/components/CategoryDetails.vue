@@ -22,6 +22,8 @@
     top: 100%;
     width: 100%;
     min-height: 100vh;
+    box-sizing: border-box;
+    padding: 60px 10px 10px 10px;
     background-color: var(--dark-grey);
   }
 </style>
