@@ -29,6 +29,7 @@
     width: 100%;
     height: 80px;
     display: flex;
+    z-index: 1000;
     justify-content: space-between;
   }
   nav div{
