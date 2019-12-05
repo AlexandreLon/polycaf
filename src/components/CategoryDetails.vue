@@ -19,6 +19,6 @@
   #details-container{
     width: 100%;
     min-height: 100vh;
-    background-color: #242424;
+    background-color: var(--dark-grey);
   }
 </style>
