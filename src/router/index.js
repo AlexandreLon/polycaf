@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
 import Home from '@/components/Home'
-import Service from '@/components/Service'
 import firebase from 'firebase'
+import Index from '@/components/Index'
+import Error404 from '@/components/Error404'
 
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Index',
+      component: Index
     },
     {
       path: '/login',
@@ -27,20 +27,17 @@ const router = new Router({
       component: SignUp
     },
     {
-      path: '/services',
-      name: 'Services',
-      component: Service,
-      meta: {
-        requiresAuth: true
-      }
-    },
-    {
       path: '/home',
       name: 'home',
       component: Home,
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '*',
+      name: 'Error404',
+      component: Error404
     }
   ]
 })
