@@ -11,8 +11,8 @@ export default class Line {
         obs2.shift1();
     }
 
-    hit(){
-        return obs1.hit() || obs2.hit();
+    hit(player){
+        return obs1.hitDown() || obs2.hitUp();
 
     }
 

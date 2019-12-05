@@ -12,5 +12,13 @@ export default class Obstacle {
         this.x2 -= 1
         this.y2 -= 1
     }
+    hitDown(player){
+        return this.y2 >= player.y1;
+
+    }
+    hitUp(player){
+        return this.y1 <= player.y2;
+
+    }
 
 }
