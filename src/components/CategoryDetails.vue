@@ -17,6 +17,9 @@
 
 <style scoped>
   #details-container{
+    z-index: 10;
+    position: absolute;
+    top: 100%;
     width: 100%;
     min-height: 100vh;
     background-color: var(--dark-grey);

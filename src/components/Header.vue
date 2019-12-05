@@ -25,7 +25,7 @@
 
 <style scoped>
   #big-container{
-
+    position: relative;
   }
 #container {
   overflow: hidden;
@@ -35,7 +35,7 @@
   box-sizing: border-box;
 }
 #heading {
-  top: 0;
+    top: 0;
     height: 100vh;
     width: 100vw;
     overflow:hidden;
@@ -46,6 +46,7 @@
     z-index: 1;
 }
 #videoBG {
+    position: fixed;
     width:auto;
     min-height: 100vh;
 }

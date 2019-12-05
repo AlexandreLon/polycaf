@@ -9,16 +9,25 @@ export default {
   name: 'App'
 }
 
-window.addEventListener("scroll", function(e){
+window.addEventListener("scroll", function(){
   let video = document.getElementById("videoBG");
+  let nav = document.getElementsByTagName("nav")[0];
+  let detailsContainer = document.getElementById("details-container");
   let height = video.offsetHeight;
   let scrollY = window.scrollY;
-  let nav = document.getElementsByTagName("nav")[0];
+  let menuSize = nav.offsetHeight;
+  let size = 1;
   let opacity = scrollY/height;
   if(opacity > 0.4)
     opacity = 0.4;
-  video.style.opacity = 1-(opacity+0.2);
+  if(menuSize < 50)
+    menuSize = 50;
+
+  nav.style.height = newSize+"px";
+  detailsContainer.style.opacity = 1-(opacity/4);
   nav.style.backgroundColor = "rgba(0,0,0,"+opacity+")";
+
+
 });
 
 </script>
