@@ -8,7 +8,20 @@
         </div>
 
         <div id="informations">
-            testing that
+            <h2>Rubriques</h2>
+            <div>
+                <ul>
+                    <li><video class="mini_player"  muted>
+                         <source src="../assets/boursebg.mp4" type="video/mp4">
+                     </video></li>
+                    <li> <video class="mini_player" muted>
+                         <source src="../assets/aplbg.mp4" type="video/mp4">
+                     </video></li>
+                    <li> <video class="mini_player" muted>
+                         <source src="../assets/bgheader.mp4" type="video/mp4">
+                     </video></li>
+                </ul>
+            </div>
         </div>
     </div>
     <CategoryDetails :detailToShow="'caf'" />
@@ -54,6 +67,22 @@
 #informations {
     position: relative;
     z-index: 2;
+    margin-left: 5%;
+}
+
+#informations h2 {
+    color: white;
+
+}
+
+#informations ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 2%;
+}
+
+.mini_player {
+    max-width: 250px;
 }
 
 </style>
