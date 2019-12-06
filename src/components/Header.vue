@@ -83,6 +83,10 @@
 
 .mini_player {
     max-width: 250px;
+    cursor:pointer;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
 }
+
+
 
 </style>
