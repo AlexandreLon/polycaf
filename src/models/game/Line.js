@@ -13,7 +13,6 @@ export default class Line {
 
     hit(player){
         return obs1.hitDown() || obs2.hitUp();
-
     }
 
 }
