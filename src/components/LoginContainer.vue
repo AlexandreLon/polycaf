@@ -1,8 +1,8 @@
 <template>
     <div id="login-container">
-      <div style="width:100%;display:flex;justify-content:center;height:30px;">
-        <button class="register" v-on:click="choice = !choice"  v-if="choice">Je n'ai pas de compte</button>
-        <button class="register" v-on:click="choice = !choice"  v-if="!choice">J'ai déjà un compte</button>
+      <div id="flex-center">
+        <button class="button-blue" v-on:click="choice = !choice"  v-if="choice">Je n'ai pas de compte</button>
+        <button class="button-blue" v-on:click="choice = !choice"  v-if="!choice">J'ai déjà un compte</button>
       </div>
       <Login v-if="choice" />
       <SignUp v-if="!choice" />
@@ -20,7 +20,7 @@
         return {
           choice: true,
       }
-      
+
     }}
 </script>
 
@@ -29,7 +29,10 @@
     padding: 80px 0 0 0;
     position: fixed;
   }
-
+  #flex-center{
+    display: flex;
+    justify-content: center;
+  }
   .register {
     border:0;
     margin:0;

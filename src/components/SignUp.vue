@@ -2,10 +2,10 @@
   <div class="sign-up">
     <h2>S'inscrire</h2>
     <input type="text" v-model="email" placeholder="Email" />
-    <br />
     <input type="password" v-model="password" placeholder="Password" />
-    <br />
-    <button class="button-blue" @click="signUp">S'inscrire</button>
+    <div class="flex-right">
+      <button class="button-blue" @click="signUp">S'inscrire</button>
+    </div>
   </div>
 </template>
 
@@ -26,8 +26,7 @@ export default {
         .createUserWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
-            this.$router.replace("/home");
-            // alert('user created')
+            //TODO : inscrire
           },
           err => {
             alert("Oops. " + err.message);

@@ -1,8 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/Login'
-import SignUp from '@/components/SignUp'
-import Home from '@/components/Home'
 import firebase from 'firebase'
 import Index from '@/components/Index'
 import Error404 from '@/components/Error404'
@@ -15,24 +12,6 @@ const router = new Router({
       path: '/',
       name: 'Index',
       component: Index
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path: '/sign-up',
-      name: 'SignUp',
-      component: SignUp
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home,
-      meta: {
-        requiresAuth: true
-      }
     },
     {
       path: '*',

@@ -5,8 +5,8 @@
       <img src="../assets/logopolycaf.png" alt="Logo" />
     </div>
     <div id="nav-connection">
-      <button v-on:click="onClickConnection" id="button-connection">{{connexion}}</button>
-
+      <button v-if="!isLogged" v-on:click="onClickConnection" id="button-connection">{{connexion}}</button>
+      <button v-if="isLogged" v-on:click="logout" id="button-connection">{{deconnexion}}</button>
       <!--
       <router-link class="menu" to="login">Login</router-link>
       <br />
@@ -23,12 +23,22 @@ export default {
     onClickConnection () {
       this.menuOpen = !this.menuOpen
       this.$emit('showMenu', this.menuOpen)
+    },
+    logout: function() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.isLogged = false
+        });
     }
   },
   data() {
     return {
+      isLogged: false,
       menuOpen: false,
-      connexion: "Connexion"
+      connexion: "Connexion",
+      deconnexion: "Déconnexion"
     };
   }
 };

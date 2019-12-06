@@ -26,7 +26,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
-            this.$router.replace("/home");
+            //TODO : connecte
           },
           err => {
             alert("Oops. " + err.message);
