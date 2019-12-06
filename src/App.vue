@@ -17,7 +17,7 @@ let menuSize = null;
 
 window.addEventListener("scroll", function(){
   if(video === null)
-    video = document.getElementById("videoBG");
+    video = document.getElementById("container");
   if(nav === null)
     nav = document.getElementsByTagName("nav")[0];
   if(detailsContainer === null)
@@ -38,7 +38,8 @@ window.addEventListener("scroll", function(){
   if(newSize < 50)
     newSize = 50;
   nav.style.height = newSize+"px";
-  detailsContainer.style.opacity = 1-(opacity/5);
+  video.style.opacity = 1-(opacity);
+  detailsContainer.style.opacity = 1-(opacity/8);
   nav.style.backgroundColor = "rgba(0,0,0,"+opacity+")";
 
 

@@ -1,14 +1,18 @@
 <template>
     <div id="details-container">
+      <CategoryDetailsCrous v-if="detailToShow === 'crous'" />
+      <CategoryDetailsApl v-if="detailToShow === 'apl'" />
       <CategoryDetailsCaf v-if="detailToShow === 'caf'" />
     </div>
 </template>
 
 <script>
     import CategoryDetailsCaf from "./CategoryDetailsCaf";
+    import CategoryDetailsCrous from "./CategoryDetailsCrous";
+    import CategoryDetailsApl from "./CategoryDetailsApl";
     export default {
       name: "CategoryDetails",
-      components: {CategoryDetailsCaf},
+      components: {CategoryDetailsApl, CategoryDetailsCrous, CategoryDetailsCaf},
       props: {
         detailToShow: String
       }
