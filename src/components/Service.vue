@@ -11,8 +11,7 @@
 
 <script>
 import firebase, { firestore } from "firebase";
-
-import { auth, db } from '../firebase'
+import {db} from '../main'
 
 
 export default {

@@ -1,18 +1,18 @@
 <template>
   <div class="home">
     <button @click="logout">Logout</button>
-
+      <router-link to="/">Accueil</router-link>
     <Service></Service>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Index from "@/components/Index.vue";
 import Service from "@/components/Service.vue";
-// import firebase from 'firebase'
+import firebase from 'firebase'
+import {db} from '../main'
 
-import { auth, db } from '../firebase'
 
 // var user = auth.currentUser;
 // console.log(user.uid)
@@ -35,7 +35,7 @@ import { auth, db } from '../firebase'
 export default {
   name: "home",
   components: {
-    HelloWorld,
+    Index,
     Service
   },
   mounted() {},
