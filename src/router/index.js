@@ -6,6 +6,7 @@ import Home from '@/components/Home'
 import firebase from 'firebase'
 import Index from '@/components/Index'
 import Error404 from '@/components/Error404'
+import Formulaire from '@/components/Formulaire'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ const router = new Router({
       path: '/sign-up',
       name: 'SignUp',
       component: SignUp
+    },
+    {
+      path: '/formulaire',
+      name: 'formulaire',
+      component: Formulaire
     },
     {
       path: '/home',
