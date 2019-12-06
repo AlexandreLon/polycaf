@@ -1,17 +1,11 @@
 <template>
   <div class="login">
-    <h3>Sign In</h3>
+    <h2>Connexion</h2>
     <input type="text" v-model="email" placeholder="Email" />
-    <br />
     <input type="password" v-model="password" placeholder="Password" />
-    <br />
-    <button @click="login">Connection</button>
-    <p>
-      You don't have an account ? You can
-      <router-link to="/sign-up">create one</router-link>
-    </p>
-
-    <router-link to="/">Accueil</router-link>
+    <div class="flex-right">
+      <button class="button-blue" @click="login">Connexion</button>
+    </div>
   </div>
 </template>
 
@@ -46,17 +40,10 @@ export default {
 <style scoped>
 /* "scoped" attribute limit the CSS to this component only */
 .login {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
   margin-top: 40px;
-}
-input {
-  margin: 10px 0;
-  width: 20%;
-  padding: 15px;
-}
-button {
-  margin-top: 20px;
-  width: 10%;
-  cursor: pointer;
 }
 p {
   margin-top: 40px;
@@ -66,4 +53,27 @@ p a {
   text-decoration: underline;
   cursor: pointer;
 }
+h2{
+  color:#ededed;
+  text-align: center;
+}
+  input[type=text], input[type=password]{
+    box-sizing: border-box;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    color: #888b9a;
+    padding: 10px 24px;
+    margin: 4px 0;
+    resize: vertical;
+    outline: 0;
+  }
+  .flex-right{
+    display : flex;
+    justify-content: flex-end;
+  }
+  .button-blue{
+    margin : 0;
+  }
 </style>

@@ -5,7 +5,8 @@
       <img src="../assets/logopolycaf.png" alt="Logo" />
     </div>
     <div id="nav-connection">
-      <button id="button-connection">{{connexion}}</button>
+      <button v-on:click="onClickConnection" id="button-connection">{{connexion}}</button>
+
       <!--
       <router-link class="menu" to="login">Login</router-link>
       <br />
@@ -18,8 +19,15 @@
 <script>
 export default {
   name: "Menu",
+  methods: {
+    onClickConnection () {
+      this.menuOpen = !this.menuOpen
+      this.$emit('showMenu', this.menuOpen)
+    }
+  },
   data() {
     return {
+      menuOpen: false,
       connexion: "Connexion"
     };
   }
