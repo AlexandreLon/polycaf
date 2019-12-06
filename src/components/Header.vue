@@ -8,6 +8,8 @@
         </div>
 
         <div id="informations">
+            <h1>Crous</h1>
+            <button id="discover">Découvrir</button>
             <h2>Rubriques</h2>
             <div>
                 <ul>
@@ -51,7 +53,7 @@
 
           console.log(this.$refs)
           console.log(this.$refs.categoryDetails)
-          console.log(this.$refs['categoryDetails'])
+          console.log(this.$refs.categoryDetails.$el)
 /*
           window.scroll({
             behavior: 'smooth',
@@ -95,6 +97,7 @@
     position: relative;
     z-index: 2;
     margin-left: 5%;
+    margin-top: 30vh;
 }
 
 #informations h2 {
@@ -110,6 +113,27 @@
 
 .mini_player {
     max-width: 250px;
+    cursor:pointer;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
 }
+
+#informations h1 {
+    font-size: 45pt;
+    color: white;
+}
+
+
+#discover {
+    margin: 0;
+    border:0;
+    background-color: var(--color-blue);
+    color: white;
+    font-size: 15pt;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+
 
 </style>
