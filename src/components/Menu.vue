@@ -8,7 +8,7 @@
       <!-- <button id="button-connection">{{connexion}}</button> -->
       <router-link class="menu" to="login">Login</router-link>
       <br />
-      <router-link class="menu" to="SignUp">Sign Up</router-link>
+      <router-link class="menu" to="sign-up">Sign Up</router-link>
     </div>
   </nav>
 </template>
