@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <CategoryDetails v-if="detailToShowChild != null" :detailToShow="detailToShowChild" />
+    <CategoryDetails ref="categoryDetails" v-if="detailToShowChild != null" :detailToShow="detailToShowChild" />
   </div>
 </template>
 
@@ -44,9 +44,22 @@
           detailToShowChild: null
         }
       },
+      mounted : function(){
+        console.log(this.$refs.categoryDetails)
+      },
       methods: {
         clickOn: function (clicked) {
           this.detailToShowChild = clicked;
+
+          console.log(this.$refs)
+          console.log(this.$refs.categoryDetails)
+          console.log(this.$refs['categoryDetails'])
+/*
+          window.scroll({
+            behavior: 'smooth',
+            top: categoryDetails.offsetTop
+          });
+          */
         }
       }
     }
