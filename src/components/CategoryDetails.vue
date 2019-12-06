@@ -1,8 +1,8 @@
 <template>
     <div id="details-container">
-      <CategoryDetailsCrous v-if="detailToShow === 'crous'" />
-      <CategoryDetailsApl v-if="detailToShow === 'apl'" />
-      <CategoryDetailsCaf v-if="detailToShow === 'caf'" />
+      <CategoryDetailsCrous v-if="detailToShow === 'Crous'" />
+      <CategoryDetailsApl v-if="detailToShow === 'Apl'" />
+      <CategoryDetailsCaf v-if="detailToShow === 'Caf'" />
     </div>
 </template>
 

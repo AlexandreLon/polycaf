@@ -1,6 +1,6 @@
 <template>
   <div id="big-container">
-    <div id="container">
+    <div ref="container" id="container">
         <div id="heading">
             <video id="videoBG" poster="poster.JPG" autoplay muted loop>
                 <source src="../assets/bgheader.mp4" type="video/mp4">
@@ -8,21 +8,21 @@
         </div>
 
         <div id="informations">
-            <h1>Crous</h1>
-            <button id="discover">Découvrir</button>
+            <h1>{{detailToShowChild}}</h1>
+            <button v-on:click="clickOn(detailToShowChild)" id="discover">Découvrir</button>
             <h2>Rubriques</h2>
             <div>
                 <ul>
                     <li>
-                      <video v-on:click="clickOn('crous')" class="mini_player"  muted>
+                      <video v-on:click="clickOn('Crous')" class="mini_player"  muted>
                          <source src="../assets/boursebg.mp4" type="video/mp4">
                      </video></li>
                     <li>
-                      <video v-on:click="clickOn('apl')" class="mini_player" muted>
+                      <video v-on:click="clickOn('Apl')" class="mini_player" muted>
                          <source src="../assets/aplbg.mp4" type="video/mp4">
                      </video></li>
                     <li>
-                      <video v-on:click="clickOn('caf')" class="mini_player" muted>
+                      <video v-on:click="clickOn('Caf')" class="mini_player" muted>
                          <source src="../assets/bgheader.mp4" type="video/mp4">
                      </video>
                     </li>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <CategoryDetails ref="categoryDetails" v-if="detailToShowChild != null" :detailToShow="detailToShowChild" />
+    <CategoryDetails ref="categoryDetails" v-show="detailToShowChild != null && openDetail" :detailToShow="detailToShowChild" />
   </div>
 </template>
 
@@ -41,25 +41,24 @@
       components: {Category, CategoryDetails},
       data(){
         return {
-          detailToShowChild: null
+          detailToShowChild: 'Crous',
+          openDetail: false
         }
-      },
-      mounted : function(){
-        console.log(this.$refs.categoryDetails)
       },
       methods: {
         clickOn: function (clicked) {
           this.detailToShowChild = clicked;
+          this.openDetail = true;
 
-          console.log(this.$refs)
-          console.log(this.$refs.categoryDetails)
-          console.log(this.$refs.categoryDetails.$el)
-/*
-          window.scroll({
-            behavior: 'smooth',
-            top: categoryDetails.offsetTop
-          });
-          */
+          let ref = this.$refs;
+
+          setTimeout(function(){
+            window.scroll({
+              behavior: 'smooth',
+              top: ref.container.offsetHeight
+            });
+          }, 10);
+
         }
       }
     }
@@ -115,6 +114,12 @@
     max-width: 250px;
     cursor:pointer;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
+    transition: 0.5s;
+}
+
+.mini_player:hover {
+    transform: scale(1.15);
+
 }
 
 #informations h1 {
