@@ -8,21 +8,21 @@
         </div>
 
         <div id="informations">
-            <h1>Crous</h1>
-            <button id="discover">Découvrir</button>
+            <h1>{{detailToShowChild}}</h1>
+            <button v-on:click="clickOn(detailToShowChild)" id="discover">Découvrir</button>
             <h2>Rubriques</h2>
             <div>
                 <ul>
                     <li>
-                      <video v-on:click="clickOn('crous')" class="mini_player"  muted>
+                      <video v-on:click="clickOn('Crous')" class="mini_player"  muted>
                          <source src="../assets/boursebg.mp4" type="video/mp4">
                      </video></li>
                     <li>
-                      <video v-on:click="clickOn('apl')" class="mini_player" muted>
+                      <video v-on:click="clickOn('Apl')" class="mini_player" muted>
                          <source src="../assets/aplbg.mp4" type="video/mp4">
                      </video></li>
                     <li>
-                      <video v-on:click="clickOn('caf')" class="mini_player" muted>
+                      <video v-on:click="clickOn('Caf')" class="mini_player" muted>
                          <source src="../assets/bgheader.mp4" type="video/mp4">
                      </video>
                     </li>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <CategoryDetails ref="categoryDetails" v-show="detailToShowChild != null" :detailToShow="detailToShowChild" />
+    <CategoryDetails ref="categoryDetails" v-show="detailToShowChild != null && openDetail" :detailToShow="detailToShowChild" />
   </div>
 </template>
 
@@ -41,12 +41,14 @@
       components: {Category, CategoryDetails},
       data(){
         return {
-          detailToShowChild: null
+          detailToShowChild: 'Crous',
+          openDetail: false
         }
       },
       methods: {
         clickOn: function (clicked) {
           this.detailToShowChild = clicked;
+          this.openDetail = true;
 
           let ref = this.$refs;
 
