@@ -114,6 +114,12 @@
     max-width: 250px;
     cursor:pointer;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
+    transition: 0.5s;
+}
+
+.mini_player:hover {
+    transform: scale(1.15);
+
 }
 
 #informations h1 {
