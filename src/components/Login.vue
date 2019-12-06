@@ -26,7 +26,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
           user => {
-            this.$router.replace("/home");
+            //TODO : connecte
           },
           err => {
             alert("Oops. " + err.message);
@@ -43,7 +43,6 @@ export default {
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
-  margin-top: 40px;
 }
 p {
   margin-top: 40px;
