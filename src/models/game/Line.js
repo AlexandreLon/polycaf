@@ -17,6 +17,7 @@ export default class Line {
     }
     passed(player){
         return this.obs1.passed(player);
+        return obs1.hitDown() || obs2.hitUp();
     }
 
 }
