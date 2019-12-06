@@ -1,5 +1,5 @@
-const JUMP_SIZE = 10;
-const FALL_SIZE = 5;
+const JUMP_SIZE = 40;
+const FALL_SIZE = 2;
 
 export default class Player {
     constructor(x1, y1, x2, y2) {
@@ -10,8 +10,9 @@ export default class Player {
     }
 
     jump() {
-        this.y1 -= JUMP_SIZE;
-        this.y2 -= JUMP_SIZE;
+
+        this.y1 -= 1;
+        this.y2 -= 1;
     }
 
     fall() {

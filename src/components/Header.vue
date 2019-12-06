@@ -31,6 +31,11 @@
                 <source src="../assets/bgheader.mp4" type="video/mp4">
               </video>
             </li>
+            <li class="li-category">
+              <router-link to="/error404">
+                <img class="mini_player" src="../assets/error.png" alt="error404">
+              </router-link>
+            </li>
           </ul>
         </div>
       </div>
