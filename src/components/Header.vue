@@ -13,15 +13,20 @@
         <h2>Rubriques</h2>
         <div>
           <ul>
-            <li>
+            <li class="li-category">
+              <div>Crous</div>
               <video v-on:click="clickOn('Crous')" class="mini_player"  muted>
                 <source src="../assets/boursebg.mp4" type="video/mp4">
-              </video></li>
-            <li>
+              </video>
+            </li>
+            <li class="li-category">
+              <div>Apl</div>
               <video v-on:click="clickOn('Apl')" class="mini_player" muted>
                 <source src="../assets/aplbg.mp4" type="video/mp4">
-              </video></li>
-            <li>
+              </video>
+            </li>
+            <li class="li-category">
+              <div>Caf</div>
               <video v-on:click="clickOn('Caf')" class="mini_player" muted>
                 <source src="../assets/bgheader.mp4" type="video/mp4">
               </video>
@@ -106,18 +111,36 @@
     display: inline-block;
     margin-right: 2%;
   }
-  .mini_player {
-    max-width: 250px;
-    cursor:pointer;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
-    transition: 0.5s;
-  }
-  .mini_player:hover {
-    transform: scale(1.15);
-
-  }
   #informations h1 {
     font-size: 45pt;
     color: white;
+  }
+  .mini_player{
+    min-width: 100%;
+    max-height: 100%;
+  }
+  .li-category{
+    object-fit: fill;
+    overflow: hidden;
+    max-width: 250px;
+    height: 150px;
+    cursor:pointer;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, .4);
+    transition: 0.5s;
+    position: relative;
+  }
+  .li-category:hover{
+    transform: scale(1.15);
+  }
+  .li-category div{
+    position: absolute;
+    width: 100%;
+    top : 50%;
+    transform: translate(0, -50%);
+    z-index: 10;
+    color : white;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: #000 0px 1px 5px;
   }
 </style>

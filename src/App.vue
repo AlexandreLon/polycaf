@@ -9,7 +9,6 @@ export default {
   name: 'App'
 }
 
-
 let video = null;
 let nav = null;
 let detailsContainer = null;

@@ -29,8 +29,7 @@
         <br><br>
         29 juillet 2016 : décret relatif aux missions et à l’organisation des œuvres universitaires
       </p>
-      <div id ="map"></div>
-
+      <a href="https://www.etudiant.gouv.fr/" target="_blank" class="button-blue">En savoir plus</a>
     </div>
   </div>
 </template>

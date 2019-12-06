@@ -26,6 +26,7 @@
         - l'allocation aux adultes handicapés ;<br />
         - le RSA (revenu de solidarité active)- la prime d'activité depuis janvier 2016. Cette aide fusionne le RSA d'activité et la Prime pour l'emploi). Cette aide est également distribuée par la MSA pour les personnes relevant du régime social agricole. Elle apporte un vrai complément de revenus aux personnes qui travaillent pour de faibles revenus, par exemple un mi-temps payé au Smic.<br />
       </p>
+      <a href="http://www.caf.fr/" target="_blank" class="button-blue">En savoir plus</a>
     </div>
   </div>
 </template>

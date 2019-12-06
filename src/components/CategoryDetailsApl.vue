@@ -17,7 +17,7 @@
         <br /><br />
         Le budget alloué aux aides aux logements est de 13,6 milliards d’euros en 2019 en France, pris en charge par le ministère du Logement.
       </p>
-      <a href="https://www.service-public.fr/particuliers/vosdroits/F12006" class="button-blue">En savoir plus</a>
+      <a href="https://www.service-public.fr/particuliers/vosdroits/F12006" target="_blank" class="button-blue">En savoir plus</a>
     </div>
   </div>
 </template>
