@@ -11,20 +11,24 @@
             <h2>Rubriques</h2>
             <div>
                 <ul>
-                    <li><video class="mini_player"  muted>
+                    <li>
+                      <video v-on:click="clickOn('crous')" class="mini_player"  muted>
                          <source src="../assets/boursebg.mp4" type="video/mp4">
                      </video></li>
-                    <li> <video class="mini_player" muted>
+                    <li>
+                      <video v-on:click="clickOn('apl')" class="mini_player" muted>
                          <source src="../assets/aplbg.mp4" type="video/mp4">
                      </video></li>
-                    <li> <video class="mini_player" muted>
+                    <li>
+                      <video v-on:click="clickOn('caf')" class="mini_player" muted>
                          <source src="../assets/bgheader.mp4" type="video/mp4">
-                     </video></li>
+                     </video>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    <CategoryDetails :detailToShow="'caf'" />
+    <CategoryDetails v-if="detailToShowChild != null" :detailToShow="detailToShowChild" />
   </div>
 </template>
 
@@ -32,7 +36,17 @@
     import Category from "./Category";
     import CategoryDetails from "./CategoryDetails";
     export default {
-        components: {Category, CategoryDetails}
+      components: {Category, CategoryDetails},
+      data(){
+        return {
+          detailToShowChild: null
+        }
+      },
+      methods: {
+        clickOn: function (clicked) {
+          this.detailToShowChild = clicked;
+        }
+      }
     }
 </script>
 

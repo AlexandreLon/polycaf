@@ -9,22 +9,37 @@ export default {
   name: 'App'
 }
 
+
+let video = null;
+let nav = null;
+let detailsContainer = null;
+let menuSize = null;
+
 window.addEventListener("scroll", function(){
-  let video = document.getElementById("videoBG");
-  let nav = document.getElementsByTagName("nav")[0];
-  let detailsContainer = document.getElementById("details-container");
+  if(video === null)
+    video = document.getElementById("container");
+  if(nav === null)
+    nav = document.getElementsByTagName("nav")[0];
+  if(detailsContainer === null)
+    detailsContainer = document.getElementById("details-container");
+  if(menuSize === null)
+    menuSize = nav.offsetHeight;
+
   let height = video.offsetHeight;
   let scrollY = window.scrollY;
-  let menuSize = nav.offsetHeight;
+  let newSize = menuSize;
   let size = 1;
   let opacity = scrollY/height;
   if(opacity > 0.4)
     opacity = 0.4;
-  if(menuSize < 50)
-    menuSize = 50;
-
+  let ratio = scrollY/height;
+  size = size-(ratio/2);
+  newSize *= size;
+  if(newSize < 50)
+    newSize = 50;
   nav.style.height = newSize+"px";
-  detailsContainer.style.opacity = 1-(opacity/4);
+  video.style.opacity = 1-(opacity);
+  detailsContainer.style.opacity = 1-(opacity/8);
   nav.style.backgroundColor = "rgba(0,0,0,"+opacity+")";
 
 
