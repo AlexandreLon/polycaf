@@ -39,6 +39,7 @@
     transform: translate(100%, 0);
     position: fixed;
     display: flex;
+    flex-wrap: wrap;
     width: 350px;
     height: 100vh;
     background: var(--dark-grey);

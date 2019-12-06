@@ -43,7 +43,6 @@ export default {
   box-sizing: border-box;
   padding: 10px;
   width: 100%;
-  margin-top: 40px;
 }
 p {
   margin-top: 40px;
