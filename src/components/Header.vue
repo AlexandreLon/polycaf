@@ -53,7 +53,7 @@
 
           console.log(this.$refs)
           console.log(this.$refs.categoryDetails)
-          console.log(this.$refs['categoryDetails'])
+          console.log(this.$refs.categoryDetails.$el)
 /*
           window.scroll({
             behavior: 'smooth',
