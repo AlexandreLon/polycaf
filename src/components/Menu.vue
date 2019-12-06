@@ -5,10 +5,12 @@
       <img src="../assets/logopolycaf.png" alt="Logo" />
     </div>
     <div id="nav-connection">
-      <!-- <button id="button-connection">{{connexion}}</button> -->
+      <button id="button-connection">{{connexion}}</button>
+      <!--
       <router-link class="menu" to="login">Login</router-link>
       <br />
       <router-link class="menu" to="sign-up">Sign Up</router-link>
+      -->
     </div>
   </nav>
 </template>
@@ -18,7 +20,7 @@ export default {
   name: "Menu",
   data() {
     return {
-      // connexion: "Connexion"
+      connexion: "Connexion"
     };
   }
 };

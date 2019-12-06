@@ -19,7 +19,7 @@
     }
 </script>
 
-<style scoped>
+<style>
   #details-container{
     z-index: 10;
     position: absolute;

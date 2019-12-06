@@ -1,5 +1,11 @@
 <template>
-  <div id="contentdetail">
+  <div id="content-detail">
+    <div id="map-container">
+      <h2>Mon crous le plus proche</h2>
+      <div>
+        <iframe width="400" height="400" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=crous+(Mon%20crous%20le%20plus%20proche)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </div>
     <div id="text">
       <h2> Un peu d'histoire </h2>
       <p>
@@ -23,34 +29,33 @@
         <br><br>
         29 juillet 2016 : décret relatif aux missions et à l’organisation des œuvres universitaires
       </p>
-      <div id ="map"></div>
-
+      <a href="https://www.etudiant.gouv.fr/" target="_blank" class="button-blue">En savoir plus</a>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-      name: "CategoryDetailsCrous"
+    name: "CategoryDetailsCrous"
   }
 </script>
 
 <style scoped>
-
-#contentdetail {
-  padding: 0 3%;
-}
- p,h2{
-   color:#ededed;
- }
- #map {
-   width: 50vw;
-   float:left;
- }
- #text{
-   text-align: justify;
-  float:left;
-  font-size: 11pt;
- }
+  #content-detail {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  p,h2{
+    color:#ededed;
+  }
+  #map {
+    width: 50vw;
+    float:left;
+  }
+  #text{
+    margin-left: 10px;
+    text-align: justify;
+    font-size: 11pt;
+  }
 
 </style>

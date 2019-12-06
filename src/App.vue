@@ -9,7 +9,6 @@ export default {
   name: 'App'
 }
 
-
 let video = null;
 let nav = null;
 let detailsContainer = null;
@@ -49,6 +48,7 @@ window.addEventListener("scroll", function(){
 <style>
   :root{
     --color-blue: #18A8F0;
+    --color-blue-lighter: #3fb7f3;
     --dark-grey: #242424;
     --ultra-dark-grey: #181818;
   }
@@ -57,5 +57,20 @@ window.addEventListener("scroll", function(){
     font-family: Montserrat, "sans-serif";
     padding: 0;
     margin: 0;
+  }
+  .button-blue {
+    display: inline-block;
+    margin: 5px 10px;
+    border:0;
+    background-color: var(--color-blue);
+    color: white;
+    font-size: 15pt;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor:pointer;
+    text-decoration: none;
+  }
+  .button-blue:hover{
+    background-color: var(--color-blue-lighter);
   }
 </style>
