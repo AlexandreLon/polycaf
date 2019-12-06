@@ -41,9 +41,7 @@ window.addEventListener("scroll", function(){
   video.style.opacity = 1-(opacity);
   detailsContainer.style.opacity = 1-(opacity/8);
   nav.style.backgroundColor = "rgba(0,0,0,"+opacity+")";
-
-
-});
+})
 
 </script>
 
