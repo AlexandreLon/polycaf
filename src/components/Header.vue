@@ -1,6 +1,6 @@
 <template>
   <div id="big-container">
-    <div id="container">
+    <div ref="container" id="container">
         <div id="heading">
             <video id="videoBG" poster="poster.JPG" autoplay muted loop>
                 <source src="../assets/bgheader.mp4" type="video/mp4">
@@ -28,7 +28,7 @@
             </div>
         </div>
     </div>
-    <CategoryDetails ref="categoryDetails" v-if="detailToShowChild != null" :detailToShow="detailToShowChild" />
+    <CategoryDetails ref="categoryDetails" v-show="detailToShowChild != null" :detailToShow="detailToShowChild" />
   </div>
 </template>
 
@@ -42,22 +42,19 @@
           detailToShowChild: null
         }
       },
-      mounted : function(){
-        console.log(this.$refs.categoryDetails)
-      },
       methods: {
         clickOn: function (clicked) {
           this.detailToShowChild = clicked;
 
-          console.log(this.$refs)
-          console.log(this.$refs.categoryDetails)
-          console.log(this.$refs['categoryDetails'])
-/*
-          window.scroll({
-            behavior: 'smooth',
-            top: categoryDetails.offsetTop
-          });
-          */
+          let ref = this.$refs;
+
+          setTimeout(function(){
+            window.scroll({
+              behavior: 'smooth',
+              top: ref.container.offsetHeight
+            });
+          }, 10);
+
         }
       }
     }
